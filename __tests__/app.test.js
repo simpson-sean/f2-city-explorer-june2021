@@ -11,13 +11,13 @@ describe('app routes', () => {
 
     test('returns location data', async() => {
 
-      const expectation = [
+      const expectation = 
         {
           "formatted_query": "Seattle, King County, Washington, USA",
           "latitude": "47.6038321",
           "longitude": "-122.3300624"
         }
-      ];
+      
 
       const data = await fakeRequest(app)
         .get('/location?search=seattle')
